@@ -1,0 +1,523 @@
+/* ==========================================================================
+   MODULE 2: THANH TOÁN (CHECKOUT & PAYMENT MODULE STYLES)
+   Tông màu chủ đạo KFC: #E4002B, #202124, #FFFFFF, #F8F9FA
+   ========================================================================== */
+
+.kfc-checkout-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 21, 24, 0.68);
+  backdrop-filter: blur(5px);
+  z-index: 320;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.kfc-checkout-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kfc-checkout-dialog {
+  background-color: var(--kfc-white, #FFFFFF);
+  width: 100%;
+  max-width: 960px;
+  max-height: 92vh;
+  border-radius: 24px;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(20px) scale(0.97);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.kfc-checkout-overlay.open .kfc-checkout-dialog {
+  transform: translateY(0) scale(1);
+}
+
+/* Header */
+.kfc-checkout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--kfc-border, #E8EAED);
+  background-color: var(--kfc-white, #FFFFFF);
+}
+
+.kfc-checkout-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.kfc-checkout-brand img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.kfc-checkout-brand h2 {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--kfc-dark, #202124);
+}
+
+.kfc-checkout-brand span {
+  font-size: 0.78rem;
+  color: var(--kfc-gray-text, #5F6368);
+  display: block;
+}
+
+.kfc-checkout-close {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--kfc-gray-bg, #F8F9FA);
+  color: var(--kfc-dark, #202124);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.kfc-checkout-close:hover {
+  background-color: var(--kfc-red, #E4002B);
+  color: #FFFFFF;
+}
+
+/* Body Grid */
+.kfc-checkout-body {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.kfc-checkout-form-col {
+  padding: 24px 28px;
+  border-right: 1px solid var(--kfc-border, #E8EAED);
+}
+
+.kfc-checkout-summary-col {
+  padding: 24px 28px;
+  background-color: var(--kfc-gray-bg, #F8F9FA);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.co-section-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--kfc-dark, #202124);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.co-step-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--kfc-red, #E4002B);
+  color: #FFFFFF;
+  font-size: 0.76rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Delivery Mode Switcher */
+.co-delivery-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.co-delivery-tab {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--kfc-border, #E8EAED);
+  background-color: #FFFFFF;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--kfc-dark, #202124);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.co-delivery-tab.active {
+  border-color: var(--kfc-red, #E4002B);
+  background-color: var(--kfc-red-soft, #FFF0F3);
+  color: var(--kfc-red, #E4002B);
+}
+
+/* Form Controls */
+.co-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.co-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.co-field label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--kfc-dark, #202124);
+}
+
+.co-field label .req {
+  color: var(--kfc-red, #E4002B);
+}
+
+.co-input,
+.co-select,
+.co-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--kfc-border, #E8EAED);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  font-size: 0.9rem;
+  color: var(--kfc-dark, #202124);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.co-input:focus,
+.co-select:focus,
+.co-textarea:focus {
+  border-color: var(--kfc-red, #E4002B);
+  box-shadow: 0 0 0 3px rgba(228, 0, 43, 0.12);
+}
+
+.co-input.input-error,
+.co-select.input-error {
+  border-color: var(--kfc-red, #E4002B);
+  background-color: #FFF8F9;
+}
+
+.co-error-msg {
+  font-size: 0.76rem;
+  color: var(--kfc-red, #E4002B);
+  font-weight: 500;
+  min-height: 16px;
+}
+
+/* Payment Methods */
+.co-payment-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.co-pay-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--kfc-border, #E8EAED);
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.co-pay-card:hover {
+  border-color: #CBD5E1;
+}
+
+.co-pay-card.active {
+  border-color: var(--kfc-red, #E4002B);
+  background-color: var(--kfc-red-soft, #FFF0F3);
+}
+
+.co-pay-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: var(--kfc-gray-bg, #F8F9FA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.co-pay-info strong {
+  display: block;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.83rem;
+  color: var(--kfc-dark, #202124);
+}
+
+.co-pay-info small {
+  font-size: 0.72rem;
+  color: var(--kfc-gray-text, #5F6368);
+}
+
+/* Dynamic Payment Sub-panels (QR / Card input) */
+.co-payment-extra {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: var(--kfc-gray-bg, #F8F9FA);
+  border: 1px dashed var(--kfc-border, #E8EAED);
+}
+
+.co-qr-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.co-qr-svg {
+  width: 76px;
+  height: 76px;
+  background: #FFFFFF;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--kfc-border, #E8EAED);
+  flex-shrink: 0;
+}
+
+.co-qr-text strong {
+  display: block;
+  font-size: 0.86rem;
+  margin-bottom: 4px;
+}
+
+.co-qr-text p {
+  font-size: 0.78rem;
+  color: var(--kfc-gray-text, #5F6368);
+}
+
+/* Summary Column */
+.co-items-list {
+  max-height: 210px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-right: 4px;
+}
+
+.co-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #FFFFFF;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--kfc-border, #E8EAED);
+}
+
+.co-summary-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.co-summary-thumb {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.co-summary-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.co-summary-qty {
+  font-size: 0.76rem;
+  color: var(--kfc-gray-text, #5F6368);
+}
+
+.co-summary-price {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--kfc-dark, #202124);
+  white-space: nowrap;
+}
+
+/* Voucher Box */
+.co-voucher-box {
+  background-color: #FFFFFF;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--kfc-border, #E8EAED);
+  margin-bottom: 16px;
+}
+
+.co-voucher-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.co-voucher-input-row input {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.co-voucher-btn {
+  background-color: var(--kfc-dark, #202124);
+  color: #FFFFFF;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.co-voucher-btn:hover {
+  background-color: var(--kfc-red, #E4002B);
+}
+
+.co-voucher-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.co-voucher-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background-color: var(--kfc-red-soft, #FFF0F3);
+  color: var(--kfc-red, #E4002B);
+  border: 1px dashed rgba(228, 0, 43, 0.35);
+}
+
+.co-voucher-pill:hover {
+  background-color: var(--kfc-red, #E4002B);
+  color: #FFFFFF;
+}
+
+.co-voucher-status {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.co-voucher-status.success {
+  color: #16A34A;
+}
+
+.co-voucher-status.error {
+  color: var(--kfc-red, #E4002B);
+}
+
+/* Price Breakdown */
+.co-Calc-rows {
+  background-color: #FFFFFF;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--kfc-border, #E8EAED);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.co-calc-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--kfc-gray-text, #5F6368);
+}
+
+.co-calc-line.discount {
+  color: #16A34A;
+  font-weight: 600;
+}
+
+.co-calc-line.total {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--kfc-dark, #202124);
+  padding-top: 10px;
+  border-top: 1px dashed var(--kfc-border, #E8EAED);
+}
+
+.co-calc-line.total strong {
+  color: var(--kfc-red, #E4002B);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.28rem;
+}
+
+.co-submit-btn {
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 1rem;
+}
+
+/* Receipt Detail inside Success Modal */
+.kfc-receipt-card {
+  text-align: left;
+  background-color: var(--kfc-gray-bg, #F8F9FA);
+  border: 1px dashed var(--kfc-border, #E8EAED);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 0.84rem;
+}
+
+.kfc-receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+@media (max-width: 820px) {
+  .kfc-checkout-body {
+    grid-template-columns: 1fr;
+  }
+
+  .kfc-checkout-form-col {
+    border-right: none;
+    border-bottom: 1px solid var(--kfc-border, #E8EAED);
+  }
+
+  .co-field-grid,
+  .co-payment-options {
+    grid-template-columns: 1fr;
+  }
+}

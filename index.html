@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KFC Việt Nam - Vị Ngon Trên Từng Ngón Tay</title>
+  <meta name="description" content="Trải nghiệm Gà Rán KFC giòn tan với công thức 11 loại thảo mộc và gia vị bí truyền. Đặt hàng nhanh chóng, ưu đãi cực hot mỗi ngày!" />
+  <link rel="icon" type="image/png" href="./images/KFC_logo-image.png" />
+
+  <!-- Google Fonts: Poppins & Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./checkout.css" />
+</head>
+<body>
+  <!-- KFC Signature 3 Red Stripes Top Bar -->
+  <div class="kfc-stripes-bar" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <!-- Brand Logo (từ thư mục images) -->
+      <a href="#top" class="brand-logo" aria-label="Trang chủ KFC">
+        <img src="./images/KFC_logo-image.png" alt="KFC Logo" class="logo-img" />
+        <div class="brand-text">
+          <span class="brand-title">KFC VIETNAM</span>
+          <span class="brand-subtitle">Vị Ngon Trên Từng Ngón Tay</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <a href="#hero" class="nav-link active">Trang chủ</a>
+        <a href="#deals" class="nav-link">Khuyến mãi Hot <span class="nav-hot-dot"></span></a>
+        <a href="#menu" class="nav-link">Thực đơn</a>
+        <a href="#features" class="nav-link">Về KFC</a>
+      </nav>
+
+      <!-- Header Actions (Cart & Mobile Menu Toggle) -->
+      <div class="header-actions">
+        <button class="cart-trigger-btn" id="openCartBtn" aria-label="Mở giỏ hàng">
+          <span class="cart-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count-badge" id="cartCountBadge">0</span>
+          </span>
+          <span class="cart-btn-text">Giỏ hàng</span>
+          <span class="cart-btn-total" id="headerCartTotal">0đ</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở menu di động" aria-expanded="false">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO BANNER ================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-decor" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="pulse-dot"></span>
+            <span>CÔNG THỨC 11 LOẠI THẢO MỘC BÍ TRUYỀN TỪ 1952</span>
+          </div>
+
+          <h1 class="hero-title">
+            Vị Ngon <br />
+            <span class="text-highlight">Trên Từng Ngón Tay!</span>
+          </h1>
+
+          <p class="hero-desc">
+            Từng miếng gà rán vàng ươm, lớp vỏ giòn rụm hòa quyện cùng thịt gà tươi mọng nước nóng hổi. Đặt ngay hôm nay để nhận ưu đãi giao hàng siêu tốc trong <strong>30 phút</strong>!
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-primary btn-lg">
+              <span>Đặt Ngay</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#deals" class="btn btn-outline btn-lg">
+              <span>Săn Deal Hot -20%</span>
+            </a>
+          </div>
+
+          <!-- Hero Highlights -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Gà Tươi Nóng Hổi</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">30 Phút</span>
+              <span class="stat-label">Giao Nhanh Tận Nơi</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">4.9 ★</span>
+              <span class="stat-label">Hơn 50K+ Đánh Giá</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Animated SVG Visual -->
+        <div class="hero-visual">
+          <div class="hero-illustration-wrapper">
+            <!-- Floating Promo Badge -->
+            <div class="floating-card floating-top-left">
+              <span class="floating-emoji">🔥</span>
+              <div>
+                <strong>Giòn Rụm Nóng Hổi</strong>
+                <small>Chiên mới mỗi mẻ</small>
+              </div>
+            </div>
+
+            <div class="floating-card floating-bottom-right">
+              <span class="floating-price-tag">Chỉ từ 19K</span>
+              <div>
+                <strong>Thực Đơn Đa Dạng</strong>
+                <small>Gà Rán • Burger • Combo</small>
+              </div>
+            </div>
+
+            <!-- Animated Vector Illustration: KFC Bucket & Crispy Drumsticks -->
+            <svg class="hero-bucket-svg" viewBox="0 0 520 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Xô Gà Rán KFC Giòn Cay">
+              <defs>
+                <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#E4002B" stop-opacity="0.32" />
+                  <stop offset="100%" stop-color="#E4002B" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="crispyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFB703" />
+                  <stop offset="55%" stop-color="#FB8500" />
+                  <stop offset="100%" stop-color="#D65A00" />
+                </linearGradient>
+                <linearGradient id="crispyLight" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFD166" />
+                  <stop offset="100%" stop-color="#F77F00" />
+                </linearGradient>
+                <linearGradient id="bucketRed" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF1E42" />
+                  <stop offset="100%" stop-color="#C80022" />
+                </linearGradient>
+                <filter id="dropShadow" x="-15%" y="-15%" width="130%" height="130%">
+                  <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#111111" flood-opacity="0.28" />
+                </filter>
+              </defs>
+
+              <!-- Ambient Glow & Floor Shadow -->
+              <circle cx="260" cy="250" r="220" fill="url(#heroGlow)" />
+              <ellipse cx="260" cy="445" rx="145" ry="22" fill="#111" opacity="0.18" />
+
+              <!-- Steam Waves -->
+              <g class="steam-group" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.65">
+                <path class="steam-line s1" d="M195 110 C185 88, 210 72, 198 48" />
+                <path class="steam-line s2" d="M260 92 C250 68, 275 52, 263 26" />
+                <path class="steam-line s3" d="M325 112 C315 90, 340 74, 328 50" />
+              </g>
+
+              <!-- Floating French Fries Behind -->
+              <g class="floating-fries">
+                <rect x="115" y="150" width="22" height="90" rx="6" transform="rotate(-24 115 150)" fill="#FFD166" stroke="#E09F3E" stroke-width="2" />
+                <rect x="142" y="132" width="22" height="95" rx="6" transform="rotate(-12 142 132)" fill="#FFC300" stroke="#E09F3E" stroke-width="2" />
+                <rect x="365" y="135" width="22" height="92" rx="6" transform="rotate(16 365 135)" fill="#FFD166" stroke="#E09F3E" stroke-width="2" />
+                <rect x="390" y="155" width="22" height="85" rx="6" transform="rotate(28 390 155)" fill="#FFC300" stroke="#E09F3E" stroke-width="2" />
+              </g>
+
+              <!-- Crispy Chicken Pieces Inside Bucket -->
+              <g class="bucket-chicken-group" filter="url(#dropShadow)">
+                <!-- Left Drumstick Bone -->
+                <g transform="rotate(-28 180 175)">
+                  <rect x="130" y="95" width="18" height="55" rx="8" fill="#FFF8EB" stroke="#E6CCB2" stroke-width="2" />
+                  <circle cx="132" cy="95" r="10" fill="#FFF8EB" />
+                  <circle cx="146" cy="95" r="10" fill="#FFF8EB" />
+                  <!-- Crispy Meat -->
+                  <path d="M110 140 C105 118, 175 118, 172 145 C182 175, 168 220, 140 222 C112 220, 98 175, 110 140 Z" fill="url(#crispyGold)" />
+                  <circle cx="132" cy="162" r="8" fill="#FFD166" opacity="0.55" />
+                  <circle cx="152" cy="180" r="6" fill="#FFD166" opacity="0.55" />
+                </g>
+
+                <!-- Right Drumstick Bone -->
+                <g transform="rotate(25 340 175)">
+                  <rect x="332" y="95" width="18" height="55" rx="8" fill="#FFF8EB" stroke="#E6CCB2" stroke-width="2" />
+                  <circle cx="334" cy="95" r="10" fill="#FFF8EB" />
+                  <circle cx="348" cy="95" r="10" fill="#FFF8EB" />
+                  <path d="M310 140 C305 118, 375 118, 372 145 C382 175, 368 220, 340 222 C312 220, 298 175, 310 140 Z" fill="url(#crispyGold)" />
+                  <circle cx="330" cy="165" r="7" fill="#FFD166" opacity="0.55" />
+                  <circle cx="350" cy="150" r="5" fill="#FFD166" opacity="0.55" />
+                </g>
+
+                <!-- Center Crispy Chicken Breast / Wing -->
+                <path d="M175 215 C165 165, 215 130, 260 135 C305 130, 355 165, 345 215 C365 235, 340 265, 260 265 C180 265, 155 235, 175 215 Z" fill="url(#crispyLight)" />
+                <path d="M195 210 C195 175, 230 152, 265 156 C300 160, 325 182, 320 215 Z" fill="url(#crispyGold)" />
+                <!-- Crispy Flakes Texture -->
+                <circle cx="230" cy="180" r="9" fill="#FFE082" opacity="0.65" />
+                <circle cx="280" cy="175" r="11" fill="#FFE082" opacity="0.55" />
+                <circle cx="255" cy="198" r="7" fill="#FFE082" opacity="0.7" />
+                <circle cx="208" cy="204" r="6" fill="#FFE082" opacity="0.6" />
+                <circle cx="305" cy="202" r="8" fill="#FFE082" opacity="0.6" />
+              </g>
+
+              <!-- Iconic KFC Bucket -->
+              <g filter="url(#dropShadow)">
+                <!-- Bucket Body Base (White) -->
+                <path d="M136 225 L384 225 L352 422 C350 432, 340 438, 328 438 L192 438 C180 438, 170 432, 168 422 L136 225 Z" fill="#FFFFFF" stroke="#202124" stroke-width="5" stroke-linejoin="round" />
+
+                <!-- Red Stripes on Bucket -->
+                <path d="M142 225 L190 225 L206 435 L176 435 L142 225 Z" fill="url(#bucketRed)" />
+                <path d="M330 225 L378 225 L344 435 L314 435 L330 225 Z" fill="url(#bucketRed)" />
+
+                <!-- Bucket Center Badge Circle -->
+                <circle cx="260" cy="328" r="54" fill="#FFF" stroke="#202124" stroke-width="4" />
+                <text x="260" y="343" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="900" font-style="italic" font-size="38" fill="#E4002B" letter-spacing="-1">KFC</text>
+                <text x="260" y="364" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="10" fill="#202124" letter-spacing="1.5">CRISPY</text>
+
+                <!-- Bucket Rim Lip -->
+                <rect x="122" y="206" width="276" height="24" rx="12" fill="#FFFFFF" stroke="#202124" stroke-width="5" />
+                <line x1="145" y1="218" x2="375" y2="218" stroke="#E4002B" stroke-width="4" stroke-linecap="round" />
+              </g>
+
+              <!-- Sparkles & Chili Peppers Accent -->
+              <g class="sparkles">
+                <path d="M90 250 L98 268 L116 276 L98 284 L90 302 L82 284 L64 276 L82 268 Z" fill="#FFB703" />
+                <path d="M430 240 L436 254 L450 260 L436 266 L430 280 L424 266 L410 260 L424 254 Z" fill="#E4002B" />
+                <circle cx="420" cy="110" r="8" fill="#FFB703" />
+                <circle cx="96" cy="120" r="6" fill="#E4002B" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KHUYẾN MÃI HOT (DEALS SECTION) ================= -->
+    <section class="deals-section" id="deals">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">ƯU ĐÃI GIỚI HẠN TRONG NGÀY</span>
+            <h2 class="section-title">Khuyến Mãi <span class="text-red">Cực Hot</span> Hôm Nay</h2>
+          </div>
+          <div class="deal-countdown" aria-label="Thời gian còn lại của ưu đãi">
+            <span class="countdown-label">Kết thúc sau:</span>
+            <div class="countdown-boxes">
+              <span class="time-box" id="cdHours">04</span>:
+              <span class="time-box" id="cdMinutes">45</span>:
+              <span class="time-box" id="cdSeconds">19</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="deals-grid">
+          <!-- Deal Card 1 -->
+          <article class="deal-card deal-featured">
+            <div class="deal-badge">GIẢM 25%</div>
+            <div class="deal-content">
+              <span class="deal-tag">THỨ 4 VUI VẺ</span>
+              <h3>Combo Tiệc Gà Giòn 3 Người</h3>
+              <p>3 Miếng Gà Giòn Cay + 1 Burger Zinger + 1 Khoai Tây Lớn + 3 Pepsi Mát Lạnh.</p>
+              <div class="deal-price-row">
+                <div class="deal-prices">
+                  <span class="deal-price-new">149.000đ</span>
+                  <span class="deal-price-old">199.000đ</span>
+                </div>
+                <button class="btn btn-light-red add-deal-btn" data-deal-id="5">
+                  + Săn Deal Ngay
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Deal Card 2 -->
+          <article class="deal-card">
+            <div class="deal-badge badge-dark">HOT DEAL</div>
+            <div class="deal-content">
+              <span class="deal-tag">COMBO CẶP ĐÔI</span>
+              <h3>Combo Đôi Hạnh Phúc</h3>
+              <p>2 Miếng Gà Giòn + 1 Khoai Tây Chiên Lớn + 2 Lon Pepsi Không Calo.</p>
+              <div class="deal-price-row">
+                <div class="deal-prices">
+                  <span class="deal-price-new">115.000đ</span>
+                  <span class="deal-price-old">139.000đ</span>
+                </div>
+                <button class="btn btn-primary add-deal-btn" data-deal-id="10">
+                  + Thêm Vào Giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Deal Card 3 -->
+          <article class="deal-card">
+            <div class="deal-badge badge-gold">MỚI RA MẮT</div>
+            <div class="deal-content">
+              <span class="deal-tag">SIÊU PHẨM HÀN QUỐC</span>
+              <h3>Gà Sốt Hàn Quốc (2 Miếng)</h3>
+              <p>Lớp vỏ giòn tan phủ xốt cay ngọt chuẩn vị Hàn Quốc rắc mè rang thơm lừng.</p>
+              <div class="deal-price-row">
+                <div class="deal-prices">
+                  <span class="deal-price-new">79.000đ</span>
+                  <span class="deal-price-old">92.000đ</span>
+                </div>
+                <button class="btn btn-primary add-deal-btn" data-deal-id="8">
+                  + Thêm Vào Giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENU ĐỘNG TỪ MENU.CSV ================= -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header menu-header">
+          <div>
+            <span class="section-eyebrow">DATABASE TRỰC TIẾP TỪ MENU.CSV</span>
+            <h2 class="section-title">Thực Đơn <span class="text-red">KFC Chính Hiệu</span></h2>
+          </div>
+
+          <!-- Search & Sort Controls -->
+          <div class="menu-controls">
+            <div class="search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="search" id="menuSearchInput" placeholder="Tìm món gà, burger, pepsi..." aria-label="Tìm kiếm món ăn" />
+            </div>
+
+            <select id="menuSortSelect" class="sort-select" aria-label="Sắp xếp theo giá">
+              <option value="default">Sắp xếp: Mặc định</option>
+              <option value="price-asc">Giá: Thấp đến Cao</option>
+              <option value="price-desc">Giá: Cao đến Thấp</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Bộ lọc danh mục món ăn">
+          <button class="cat-tab active" data-category="all" role="tab" aria-selected="true">
+            <span class="cat-icon">🍗</span> Tất cả
+          </button>
+          <button class="cat-tab" data-category="chicken" role="tab" aria-selected="false">
+            <span class="cat-icon">🔥</span> Gà Rán
+          </button>
+          <button class="cat-tab" data-category="burger" role="tab" aria-selected="false">
+            <span class="cat-icon">🍔</span> Burger
+          </button>
+          <button class="cat-tab" data-category="combo" role="tab" aria-selected="false">
+            <span class="cat-icon">🥡</span> Combo
+          </button>
+          <button class="cat-tab" data-category="side" role="tab" aria-selected="false">
+            <span class="cat-icon">🍟</span> Khoai & Món Phụ
+          </button>
+          <button class="cat-tab" data-category="drink" role="tab" aria-selected="false">
+            <span class="cat-icon">🥤</span> Nước & Tráng Miệng
+          </button>
+        </div>
+
+        <!-- CSV Data Source Status Bar -->
+        <div class="csv-status-bar" id="csvStatusBar">
+          <span class="status-dot"></span>
+          <span id="csvStatusText">Đang tải dữ liệu từ <code>menu.csv</code>...</span>
+        </div>
+
+        <!-- Dynamic Products Grid -->
+        <div class="menu-grid" id="menuGrid" aria-live="polite">
+          <!-- Rendered dynamically by app.js from menu.csv -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BRAND STORY / FEATURES SECTION ================= -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="features-banner">
+          <div class="features-intro">
+            <span class="section-eyebrow">CHẤT LƯỢNG LÀM NÊN THƯƠNG HIỆU</span>
+            <h2>Vì Sao Hàng Triệu Thực Khách Yêu Thích KFC?</h2>
+            <p>Từ công thức 11 loại thảo mộc và gia vị bí truyền của Đại tá Harland Sanders, mỗi phần ăn đều được chế biến tươi mới tại nhà hàng mỗi ngày.</p>
+          </div>
+          <div class="features-cards">
+            <div class="feature-box">
+              <div class="feature-icon">🌿</div>
+              <h3>11 Thảo Mộc Bí Truyền</h3>
+              <p>Hương vị độc bản không thể trộn lẫn, thấm đẫm trong từng thớ thịt gà tươi ngon.</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">⚡</div>
+              <h3>Giao Hàng Siêu Tốc 30'</h3>
+              <p>Túi giữ nhiệt chuyên dụng đảm bảo gà rán và khoai tây luôn giòn nóng khi tới tay bạn.</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">🛡️</div>
+              <h3>100% Gà Tươi Kiểm Định</h3>
+              <p>Nguồn nguyên liệu đạt chuẩn an toàn vệ sinh thực phẩm quốc tế nghiêm ngặt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="kfc-stripes-bar" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand-logo footer-logo">
+          <img src="./images/KFC_logo-image.png" alt="KFC Logo" class="logo-img" />
+          <div class="brand-text">
+            <span class="brand-title">KFC VIETNAM</span>
+            <span class="brand-subtitle">Vị Ngon Trên Từng Ngón Tay</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Trang Landing Page giới thiệu thực đơn Gà Rán KFC sử dụng kiến trúc Serverless CSV-Driven (HTML5, CSS3 & Vanilla JS thuần).
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Danh Mục Món Ăn</h4>
+        <ul>
+          <li><a href="#menu" data-footer-cat="chicken">Gà Rán Giòn Cay</a></li>
+          <li><a href="#menu" data-footer-cat="burger">Burger Thượng Hạng</a></li>
+          <li><a href="#menu" data-footer-cat="combo">Combo Tiết Kiệm</a></li>
+          <li><a href="#menu" data-footer-cat="drink">Thức Uống & Tráng Miệng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên Hệ Đặt Hàng</h4>
+        <ul>
+          <li>📞 Tổng đài: <strong>1900 6886</strong></li>
+          <li>⏰ Giờ mở cửa: <strong>09:00 – 22:00</strong> (Mỗi ngày)</li>
+          <li>📍 Hệ thống hơn 150 nhà hàng toàn quốc</li>
+          <li>✉️ Email: lienhe@kfcvietnam.com.vn</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 KFC Vietnam Fan-Made Landing Page. Thiết kế phục vụ học tập & trình diễn Vibe Coding.</p>
+    </div>
+  </footer>
+
+  <!-- ================= MINI CART MODAL / DRAWER ================= -->
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+    <div class="cart-drawer-header">
+      <div class="cart-title-group">
+        <img src="./images/KFC_logo-image.png" alt="" class="cart-mini-logo" />
+        <h3 id="cartDrawerTitle">Giỏ Hàng Của Bạn</h3>
+      </div>
+      <button class="close-cart-btn" id="closeCartBtn" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+
+    <!-- Free shipping progress bar -->
+    <div class="free-ship-banner" id="freeShipBanner">
+      <p id="freeShipText">Mua thêm <strong>150.000đ</strong> để được <strong>MIỄN PHÍ GIAO HÀNG</strong>!</p>
+      <div class="free-ship-track">
+        <div class="free-ship-fill" id="freeShipFill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="cart-items-container" id="cartItemsContainer">
+      <!-- Populated dynamically via app.js -->
+    </div>
+
+    <!-- Cart Footer Summary -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-summary-rows">
+        <div class="summary-row">
+          <span>Tạm tính:</span>
+          <strong id="cartSubtotal">0đ</strong>
+        </div>
+        <div class="summary-row">
+          <span>Phí giao hàng:</span>
+          <strong id="cartShipping">15.000đ</strong>
+        </div>
+        <div class="summary-row summary-total">
+          <span>Tổng thanh toán:</span>
+          <strong id="cartTotalPrice">0đ</strong>
+        </div>
+      </div>
+
+      <div class="cart-footer-actions">
+        <button class="btn btn-outline btn-sm" id="clearCartBtn" type="button">Xóa giỏ</button>
+        <button class="btn btn-primary btn-checkout" id="checkoutBtn" type="button">
+          <span>Đặt Hàng Ngay</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= CHECKOUT SUCCESS MODAL ================= -->
+  <div class="checkout-modal-backdrop" id="checkoutModalBackdrop" aria-hidden="true">
+    <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <div class="checkout-icon">🎉</div>
+      <h3 id="checkoutTitle">Đặt Hàng Thành Công!</h3>
+      <p id="checkoutMessage">Đơn hàng KFC của bạn đang được bếp chuẩn bị nóng hổi và sẽ giao trong 30 phút.</p>
+      <div class="checkout-order-code" id="checkoutOrderCode">Mã đơn: #KFC-8899</div>
+      <button class="btn btn-primary" id="closeCheckoutModalBtn" type="button">Tiếp Tục Khám Phá</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Application Script -->
+  <script src="./app.js"></script>
+  <script src="./checkout.js"></script>
+</body>
+</html>

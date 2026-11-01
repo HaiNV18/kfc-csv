@@ -1,0 +1,13 @@
+id,name,category,price,description,badge,image_type
+1,Gà Giòn Cay (1 Miếng),chicken,40000,Gà giòn cay thơm nức giòn rụm khó cưỡng,Bestseller,fried-chicken
+2,Gà Truyền Thống (1 Miếng),chicken,38000,Hương vị 11 loại thảo mộc nguyên bản KFC,,fried-chicken
+3,Burger Tôm Cay,burger,55000,Tôm biển giòn ngọt kèm sốt cay bùng nổ,Mới,burger
+4,Burger Zinger,burger,65000,Thịt gà phi lê xốt mayonnaise thượng hạng,Hot,burger
+5,Combo Nhóm Siêu Tiết Kiệm,combo,149000,3 miếng gà + 1 burger + 2 lon Pepsi,Tiết kiệm 20%,combo
+6,Khoai Tây Chiên (Lớn),side,29000,Khoai tây cắt thanh giòn vàng rộm,,fries
+7,Pepsi Không Calo,drink,19000,Nước ngọt có gas mát lạnh sảng khoái,,drink
+8,Gà Sốt Hàn Quốc (2 Miếng),chicken,79000,Gà rán phủ sốt cay ngọt kiểu Hàn rắc mè rang,Hot,fried-chicken
+9,Burger Gà Quay Flava,burger,62000,Đùi gà quay tiêu đậm đà kẹp rau tươi giòn,,burger
+10,Combo Đôi Hạnh Phúc,combo,115000,2 miếng gà giòn + 1 khoai tây lớn + 2 Pepsi,Bán chạy,combo
+11,Bánh Trứng Nướng KFC (2 Cái),drink,34000,Vỏ bánh ngàn lớp giòn xốp nhân kem trứng béo ngậy,Yêu thích,dessert
+12,Trà Đào Cam Sả,drink,29000,Trà đào thanh mát kèm miếng đào giòn ngọt,Mới,drink
